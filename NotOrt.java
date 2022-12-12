@@ -38,7 +38,7 @@ public class NotOrt {
                     numberOfLesson++;
                     System.out.println("Derslerin Ortalaması: " + (avange / numberOfLesson));}
                 else {
-                    System.out.println("Ortalamanız Hesaplanamaz!");
+                    System.out.println("Ortalamanız Hesaplanamaz!!");
 
 
 
