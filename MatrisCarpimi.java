@@ -11,7 +11,7 @@ public class MatrisCarpimi {
             }
             System.out.println();
         }
-         System.out.println();
+        System.out.println();
     }
     public static int [][]carp(int[][]m1,int[][]m2){
         int i,j,k;
