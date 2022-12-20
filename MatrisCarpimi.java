@@ -7,9 +7,11 @@ public class MatrisCarpimi {
         carpim=carp(matris1,matris2);
         for(i=0;i<2;i++){
             for (j=0;j<2;j++){
-                System.out.println(carpim[i][j]);
+                System.out.print(carpim[i][j]+" ");
             }
+            System.out.println();
         }
+         System.out.println();
     }
     public static int [][]carp(int[][]m1,int[][]m2){
         int i,j,k;
