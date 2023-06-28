@@ -5,6 +5,7 @@ public class Atm {
         String username,password;
         int right=3;
         int balance=6500;
+        int select;
 
         Scanner scn =new Scanner(System.in);
 
@@ -19,33 +20,35 @@ public class Atm {
             if (username.equals("patika") && password.equals("dev123")) {
                 System.out.println("Hi! Welcome to Kodluyoruz Bank!");
 
-                System.out.println("1-Para yatırma \n 2-Para Çekme \n 3-Bakiye Sorgulama \n 4-Çıkış yapma");
-                System.out.println("Please select your choice");
-                int select = scn.nextInt();
-                switch (select) {
-                    case 1:
-                        System.out.println("enter the amount of money");
-                        int price = scn.nextInt();
-                        balance += price;
-                        System.out.println("New balance: " + balance);
-                        break;
-                    case 2:
-                        System.out.println("Enter the amount of money");
-                        price = scn.nextInt();
-                        if (balance < price) {
-                            System.out.println("insufficient balance");
-                        } else {
-                            balance -= price;
-                            System.out.println("Balance: " + balance);
-                        }
-                        break;
-                    case 3:
-                        System.out.println("Balance: " + balance);
-                        break;
-                    case 4:
-                        System.out.println("See you again.");
-                        break;
-                }
+               do {
+                   System.out.println("1-Para yatırma \n 2-Para Çekme \n 3-Bakiye Sorgulama \n 4-Çıkış yapma");
+                   System.out.println("Please select your choice");
+                    select = scn.nextInt();
+                   switch (select) {
+                       case 1:
+                           System.out.println("enter the amount of money");
+                           int price = scn.nextInt();
+                           balance += price;
+                           System.out.println("New balance: " + balance);
+                           break;
+                       case 2:
+                           System.out.println("Enter the amount of money");
+                           price = scn.nextInt();
+                           if (balance < price) {
+                               System.out.println("insufficient balance");
+                           } else {
+                               balance -= price;
+                               System.out.println("Balance: " + balance);
+                           }
+                           break;
+                       case 3:
+                           System.out.println("Balance: " + balance);
+                           break;
+
+                   }
+               } while (select != 4) ;
+                   System.out.println("See you again.");
+                   break;
             } else {
                 right--;
                 System.out.println("Incorrect username or password. Try again.");
